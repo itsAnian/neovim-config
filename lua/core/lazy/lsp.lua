@@ -16,8 +16,7 @@ return {
     config = function()
 
         -- Add this at the end of your config function before the last end
-        local function on_attach(client, bufnr)
-            -- Disable document highlighting in normal mode
+        local function on_attach(client, bufnr) -- Disable document highlighting in normal mode
             client.server_capabilities.documentHighlightProvider = false
 
             -- If you also want to disable semantic tokens for all servers
@@ -35,12 +34,9 @@ return {
 
         local lspconfig = require("lspconfig")
         lspconfig.clangd.setup({
-            cmd = { "clangd", "--background-index", "--clang-tidy", "--log=verbose" },
+            cmd = { "clangd", "--background-index", "--clang-tidy", "--log=verbose", "--fallback-style=webkit" },
             init_options = {
                 fallbackFlags = { "-std=c99" },
-            },
-            capabilities = {
-                semanticTokensProvider = false
             },
             root_dir = require("lspconfig.util").root_pattern("CMakeLists.txt", ".git"),
         })
