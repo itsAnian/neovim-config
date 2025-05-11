@@ -68,9 +68,9 @@ return {
             on_attach = on_attach,
             settings = {
                 python = {
-                    checkOnType = false, -- Enable live type checking
-                    diagnostics = false,  -- Enable diagnostics
-                    inlayHints = false,   -- Enable inlay hints
+                    checkOnType = true, -- Enable live type checking
+                    diagnostics = true,  -- Enable diagnostics
+                    inlayHints = true,   -- Enable inlay hints
                     smartCompletion = true, -- Smarter auto-completion
                 },
             },

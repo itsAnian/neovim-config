@@ -25,3 +25,9 @@ vim.opt.updatetime = 50
 vim.g.netrw_liststyle = 3
 
 vim.opt.clipboard = "unnamedplus"
+
+vim.filetype.add({
+  extension = {
+    cs = "c_sharp",
+  },
+})
