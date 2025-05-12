@@ -1,5 +1,5 @@
 vim.opt.nu = true
-vim.opt.relativenumber = false 
+vim.opt.relativenumber = false
 
 
 vim.opt.tabstop = 4
@@ -9,7 +9,7 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 
 vim.opt.hlsearch = false
