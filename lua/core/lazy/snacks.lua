@@ -8,18 +8,17 @@ return {
         -- or leave it empty to use the default settings
         -- refer to the configuration section below
         bigfile = { enabled = true },
-        dashboard = { 
+        dashboard = {
             enabled = true,
             sections = {
                 { section = "header" },
                 { icon = " ", title = "Keymaps", section = "keys", indent = 2, padding = 1 },
-                { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
-                { icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
+                { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 }, { icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
                 { section = "startup" },
             },
             preset = {
                 header = {
-                [[
+                    [[
 //////////////////////////////////////////////////////////////////////
 //██████╗  █████╗ ███╗   ██╗██████╗  █████╗ ██╗   ██╗██╗███╗   ███╗ //
 //██╔══██╗██╔══██╗████╗  ██║██╔══██╗██╔══██╗██║   ██║██║████╗ ████║ //
@@ -32,7 +31,7 @@ return {
                 },
             },
         },
-        explorer = { 
+        explorer = {
             enabled = true,
             replace_netrw = true, -- Replace netrw with the snacks explorer
         },
@@ -95,17 +94,21 @@ return {
         scope = { enabled = true },
         scroll = { enabled = true },
         statuscolumn = {
-            enabled = true,
-            left = { "mark", "sign" },
-            right = { "fold", "git" },
+            ---@class snacks.statuscolumn.Config
+            ---@field left snacks.statuscolumn.Components
+            ---@field right snacks.statuscolumn.Components
+            ---@field enabled? boolean
+            left = { "mark", "sign" }, -- priority of signs on the left (high to low)
+            right = { "fold", "git" }, -- priority of signs on the right (high to low)
             folds = {
-                open = false,
-                git_hl = false,
+                open = false,          -- show open fold icons
+                git_hl = false,        -- use Git Signs hl for fold icons
             },
             git = {
+                -- patterns to match Git signs
                 patterns = { "GitSign", "MiniDiffSign" },
             },
-            refresh = 50,
+            refresh = 50, -- refresh at most every 50ms
         },
         words = { enabled = true },
     },
