@@ -88,7 +88,16 @@ return {
         },
         indent = { enabled = true },
         input = { enabled = true },
-        picker = { enabled = true },
+        picker = {
+            hidden = true,
+            ignored = true,
+            sources = {
+                explorer = {
+                    hidden = true,
+                    ignored = true,
+                },
+            },
+        },
         notifier = { enabled = true },
         quickfile = { enabled = true },
         scope = { enabled = true },
