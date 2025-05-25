@@ -58,7 +58,7 @@ return {
             settings = {
                 ['nil'] = {
                     formatting = {
-                        command = { "nixfmt" },
+                        command = { "alejandra" },
                     },
                 },
             },
