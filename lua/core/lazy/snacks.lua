@@ -32,7 +32,7 @@ return {
             },
         },
         explorer = {
-            enabled = true,
+            enabled = false,
             replace_netrw = true, -- Replace netrw with the snacks explorer
         },
         image = {
@@ -119,6 +119,6 @@ return {
             },
             refresh = 50, -- refresh at most every 50ms
         },
-        words = { enabled = true },
+        -- words = { enabled = true },
     },
 }
